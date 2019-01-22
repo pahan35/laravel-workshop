@@ -26,4 +26,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function someHardcodedOption()
+    {
+        return \App\Enums\SomeOption::getValue(1); // wrong positive unnecessary FQN here
+    }
 }
